@@ -1,0 +1,77 @@
+.btn-primary {
+  @include button($color: #ffffff, $bg-color: $primary);
+}
+
+.btn-secondary {
+  @include button($color: #ffffff, $bg-color: $secondary);
+}
+
+.btn-danger {
+  @include button($color: #ffffff, $bg-color: $danger);
+}
+
+.btn-dark {
+  @include button($color: #ffffff, $bg-color: #333);
+}
+
+.profile-button {
+  @include button($color: #ffffff, $bg-color: $gray-700);
+  @extend .outlined;
+  // padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    // color: $gray-200;
+    background-color: rgba($color: $primary, $alpha: 0.1)
+  }
+}
+
+// tabmenu using buttons
+.tabmenu-container {
+  display: flex;
+  align-items: center;
+  border-radius: $border-radius-sm;
+
+  .tabmenu-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .tabmenu-button {
+      font-weight: 700;
+      padding: 4px 12px;
+      border-bottom: 4px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 13px;
+      text-transform: uppercase;
+      transition: $transition-medium;
+      -moz-transition: $transition-medium;
+      -webkit-transition: $transition-medium;
+
+      i {
+        font-size: 16px;
+      }
+
+      &:hover {
+        border-bottom-color: rgba($color: $primary, $alpha: 0.3);
+        // background-color: rgba($color: $primary, $alpha: 0.1);
+        // color: $white;
+      }
+    }
+
+    .active {
+      color: $primary;
+      border-bottom-color: $primary !important;
+      // background-color: $primary;
+      // color: $white;
+    }
+  }
+}

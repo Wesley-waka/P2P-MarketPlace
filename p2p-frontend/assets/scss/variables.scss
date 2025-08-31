@@ -1,0 +1,124 @@
+/**
+ * Sidemenu
+ */
+$sidebar-bg: #ffffff;
+$sidebar-menu-item-bg: transparent;
+$sidebar-menu-item-color: #222222;
+$sidebar-menu-item-icon-color: $sidebar-menu-item-color;
+$sidebar-menu-sub-item-bg: $sidebar-menu-item-bg;
+$sidebar-menu-sub-item-color: $sidebar-menu-item-color;
+$sidebar-menu-item-hover-bg: #1e40af55;
+$sidebar-menu-item-hover-color: $sidebar-menu-item-color;
+$sidebar-menu-sub-item-hover-bg: #1e40af44;
+$sidebar-menu-sub-item-hover-color: $sidebar-menu-item-color;
+$sidebar-menu-item-active-bg: #1e40af;
+$sidebar-menu-item-active-color: #ffffff;
+$sidebar-menu-sub-item-active-bg: #99f6e4;
+$sidebar-menu-sub-item-active-color: #222222;
+$sidebar-width: 240px;
+$sidebar-collapsed-width: 70px;
+$sidebar-width-sm: 160px;
+$layout-collapsed-min-height: 1760px;
+/**
+ * end Sidemenu
+ */
+
+/**
+ * Topbar
+ */
+$header-height: 60px;
+$header-bg: #ccfbf1;
+$header-item-color: #222222;
+/**
+ * end Topbar
+ */
+
+/**
+ * Colors
+ */
+$primary: #ff461e;
+$secondary: #f8285f;
+$danger: #dc2626;
+$white: #ffffff;
+$black: #000000;
+
+// // *** BACKGROUNDS COLORS ***
+// $navbar-bg: #fff;
+// $dashboard-bg: #f4f5f6;
+// $table-bg: #f9fafc;
+
+// // *** BORDERS AND OUTLINES COLORS ***
+// $outline: #e2e7f1;
+// $outline-dark: #ced6e3;
+// $box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, .03);
+
+// scss-docs-start gray-color-variables
+$white: #ffffff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #161616;
+$plum: #2f1c54;
+$sage: #ebfdff; // scss-docs-end gray-color-variables
+
+/**
+ * borders
+ */
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-2xl: 20px;
+/**
+ * end borders
+ */
+
+/**
+ * Buttons
+ */
+$btn-padding: 8px 12px;
+$btn-padding-sm: 4px 10px;
+$btn-border: 0.5px solid #e2e7f1;
+$btn-border-radius: 10px;
+// SHORT BUTTON
+$btn-short-font-size: 14px;
+$btn-short-font-weight: 400;
+$btn-short-height: 30px;
+/**
+ * end Buttons
+ */
+
+/**
+ * Cards
+ */
+/**
+ * end Cards
+ */
+
+/**
+ * Inputs
+ */
+$input-padding: 8px 12px;
+$input-outline: 1px solid #ddd;
+$input-error-outline: 1px solid #ff0000;
+$input-font-size: 13px;
+/**
+ * end Inputs
+ */
+
+/**
+ * transitions
+ */
+$transition-fast: all 0.3s ease-in-out;
+$transition-medium: all 0.5s ease-in-out;
+$transition-slow: all 0.8s ease-in-out;
+$transition-custom: all 0.5s 0s ease-out;
+/**
+ * end transitions
+ */

@@ -1,0 +1,760 @@
+label {
+  font-size: $input-font-size !important;
+  font-weight: 400 !important;
+  // text-transform: capitalize;
+  font-family: Figtree, sans-serif !important;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  color: #000 !important;
+  text-align: left;
+}
+
+.input-error {
+  margin-top: 0.25rem;
+  color: #ff0000;
+  font-size: 12px !important;
+}
+
+.p-inputtext,
+.p-textarea,
+.inputtext {
+  font-size: $input-font-size !important;
+  padding: $input-padding !important;
+  outline: $input-outline !important;
+  border-radius: $border-radius-sm !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: 100%;
+
+  &:focus {
+    outline: $input-outline;
+  }
+
+  &::placeholder,
+  &.p-placeholder {
+    color: #aaa;
+  }
+
+  &:disabled {
+    background-color: #f4f4f4;
+    color: #aaa;
+  }
+
+  &:read-only {
+    background-color: #f4f4f4;
+    // color: #aaa;
+  }
+
+  &.p-invalid,
+  &.error {
+    outline: $input-error-outline !important;
+
+    &:focus,
+    &:hover {
+      outline: $input-error-outline !important;
+    }
+  }
+}
+
+.icon-input-container {
+  position: relative;
+
+  .p-password-input {
+    padding-left: 35px;
+  }
+
+  .input-with-icon {
+    position: absolute;
+
+    &.front {
+      top: 6px;
+      left: 5px;
+    }
+
+    &.end {
+      right: 0;
+    }
+  }
+}
+
+.p-password,
+.p-inputnumber {
+  width: 100% !important;
+
+  &.p-invalid,
+  &.error {
+    .p-inputtext {
+      border: $input-error-outline;
+
+      &:focus,
+      &:hover {
+        border: $input-error-outline;
+      }
+    }
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.p-checkbox {
+  width: 12px;
+  height: 12px;
+  border: none;
+  box-shadow: none;
+  border-radius: $border-radius-sm;
+  outline: 1.5px solid $secondary;
+
+  .p-checkbox-box,
+  .p-checkbox-input {
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      border: none;
+      outline: $input-outline;
+    }
+  }
+
+  &.p-checkbox-checked {
+    .p-checkbox-box {
+      background-color: $primary !important;
+    }
+  }
+
+  &.p-invalid,
+  &.error {
+    outline: $input-error-outline;
+
+    &:focus,
+    &:hover {
+      outline: $input-error-outline;
+    }
+  }
+}
+
+.p-multiselect {
+  outline: none;
+  box-shadow: none;
+  border: $input-outline;
+  border-radius: $border-radius-sm;
+  padding-right: 8px;
+  width: 100%;
+
+  .p-multiselect-label-container {
+    .p-multiselect-label {
+      font-size: $input-font-size !important;
+      padding: 7px 12px;
+      box-shadow: none;
+      width: 100%;
+    }
+  }
+
+  .p-multiselect-trigger {
+    width: 18px;
+    height: 18px;
+    font-size: $input-font-size !important;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &:focus,
+  &:hover {
+    border: $input-outline;
+    cursor: pointer;
+  }
+
+  &::placeholder,
+  &.p-placeholder {
+    color: #aaa;
+  }
+
+  &:disabled,
+  &.p-disabled {
+    background-color: #f4f4f4;
+    color: #aaa;
+  }
+
+  &.p-invalid,
+  &.error {
+    border: $input-error-outline;
+  }
+}
+
+.p-multiselect-panel {
+  .p-multiselect-header {
+    position: relative;
+    padding: 0 12px;
+    margin: 2px 0;
+    font-size: $input-font-size !important;
+    border-radius: $border-radius-sm;
+
+    &::after {
+      content: 'Select All';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 3rem;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .p-multiselect-filter-container {
+      z-index: 2;
+
+      .p-inputtext {
+        font-size: $input-font-size !important;
+        padding: $input-padding;
+        outline: $input-outline;
+        border-radius: $border-radius-sm;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+
+        &:focus {
+          outline: $input-outline;
+        }
+
+        &::placeholder,
+        &.p-placeholder {
+          color: #aaa;
+        }
+      }
+    }
+  }
+
+  .p-multiselect-items {
+    padding: 6px;
+
+    .p-multiselect-item {
+      padding: 0 16px;
+      margin: 4px 0;
+      font-size: $input-font-size !important;
+      border-radius: $border-radius-sm;
+
+      &:hover {
+        background-color: $primary;
+        color: #fff;
+
+        &.p-focus {
+          background-color: $primary;
+          color: #fff;
+        }
+
+        .p-checkbox {
+          .p-checkbox-box {
+            background-color: #fff;
+
+            .p-checkbox-icon {
+              color: $primary;
+            }
+          }
+        }
+      }
+
+      &.p-focus {
+        background-color: #4263eb1a;
+      }
+    }
+  }
+
+  .p-checkbox {
+    width: 14px;
+    height: 14px;
+    outline: 1.5px solid $secondary;
+    box-shadow: none;
+    border: none;
+    border-radius: $border-radius-sm;
+    // cursor: pointer;
+
+    .p-checkbox-box,
+    .p-checkbox-input {
+      width: 100%;
+      height: 100%;
+      padding: 1px;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      border-radius: $border-radius-sm;
+      // border-radius: 0px;
+    }
+
+    &:focus,
+    &:hover {
+      border: none;
+      // outline: $input-outline;
+    }
+
+    &:hover {
+      border: 1px solid $primary;
+    }
+  }
+}
+
+.p-select {
+  border: none !important;
+  box-shadow: none !important;
+  outline: $input-outline !important;
+  border-radius: $border-radius-sm !important;
+  padding-right: 8px !important;
+  width: 100% !important;
+
+  .p-select-label {
+    font-size: $input-font-size !important;
+    padding: 7px 12px !important;
+    box-shadow: none !important;
+    width: 100% !important;
+  }
+
+  &:focus,
+  &:hover {
+    outline: $input-outline !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+
+  &.p-disabled {
+    background-color: #f4f4f4;
+    color: #aaa;
+  }
+
+  .p-placeholder {
+    color: #aaa;
+  }
+
+  &.p-invalid,
+  &.error {
+    outline: $input-error-outline !important;
+  }
+}
+
+.p-select-overlay {
+  .p-select-list-container {
+    .p-select-list {
+      padding: 6px !important;
+
+      .p-select-option {
+        padding: 0 8px;
+        margin: 2px 0 !important;
+        font-size: $input-font-size !important;
+        border-radius: $border-radius-sm;
+
+        // background-color: red;
+        &.p-select-option-selected {
+          background-color: $primary;
+          color: #fff;
+
+          &.p-focus {
+            background-color: $primary;
+            color: #fff;
+          }
+        }
+
+        &.p-focus {
+          background-color: #4263eb1a;
+        }
+      }
+    }
+  }
+}
+
+.p-selectbutton {
+  padding: 4px 6px;
+  border-radius: $border-radius-sm;
+  gap: 4px;
+  background-color: rgba($color: $primary, $alpha: 0.2);
+
+  .p-button {
+    padding: $btn-padding-sm;
+    background-color: transparent;
+    color: $primary;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: $border-radius-sm;
+    transition: $transition-medium;
+    -o-transition: $transition-medium;
+    -ms-transition: $transition-medium;
+    -moz-transition: $transition-medium;
+
+    .p-button-label {
+      font-size: $input-font-size !important;
+    }
+
+    &:hover,
+    &.p-focus {
+      background-color: $primary;
+      color: #fff;
+      border: none;
+    }
+  }
+}
+
+.vue-tel-input {
+  border-radius: $border-radius-sm;
+  border: none;
+  outline: $input-outline;
+  box-shadow: none;
+  font-size: $input-font-size !important;
+
+  &.p-invalid {
+    border: $input-error-outline;
+  }
+
+  .vti__input,
+  .vti__dropdown {
+    border-radius: $border-radius-sm;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: $input-font-size !important;
+    padding: 8px;
+  }
+
+  .vti__selection {
+
+    .vti__country-code {
+      min-width: 50px;
+      text-align: end;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+
+  &.p-invalid,
+  &.error {
+    border: $input-error-outline;
+
+    &:focus,
+    &:hover {
+      border: $input-error-outline;
+    }
+  }
+}
+
+.file-input-container {
+  width: 100% !important;
+  display: flex;
+
+  .file-input {
+    position: relative;
+    outline: $input-outline;
+    border-radius: $border-radius-sm;
+    border: none;
+    box-shadow: none;
+    width: 100% !important;
+    cursor: pointer;
+    height: 2.2rem;
+
+    &::before {
+      // content: 'Choose File';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: $input-padding;
+      border-radius: $border-radius-sm;
+      // background-color: #fff;
+      color: #000;
+      font-weight: 400;
+      font-size: $input-font-size !important;
+      cursor: pointer;
+    }
+
+    .file-name {
+      position: absolute;
+      top: 0;
+      left: 14px;
+      width: 100%;
+      height: 100%;
+      padding: $input-padding;
+      border-radius: $border-radius-sm;
+      background-color: transparent;
+      color: #000;
+      font-size: $input-font-size !important;
+      // truncate text
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+
+      &.file-placeholder {
+        color: #aaa;
+      }
+    }
+
+    // add clipper icon to the file input
+    .clipper {
+      position: absolute;
+      top: 6px;
+      bottom: 8px;
+      //right: 8px;
+      left: 4px;
+      // color: #000;
+      cursor: pointer;
+    }
+
+    .cancel {
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      right: 2rem;
+      // color: #000;
+      cursor: pointer;
+    }
+
+    input {
+      display: none !important;
+    }
+  }
+}
+
+.p-datepicker {
+  border: none !important;
+  box-shadow: none !important;
+  outline: $input-outline !important;
+  border-radius: $border-radius-sm;
+  width: 100%;
+
+  &.p-inputwrapper-filled {
+    background-color: none !important;
+  }
+
+  .p-inputtext {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: none !important;
+    border-radius: $border-radius-sm !important;
+    cursor: pointer !important;
+  }
+
+  .p-datepicker-dropdown {
+    border: none !important;
+    background: none !important;
+  }
+
+  &:focus,
+  &:hover {
+    outline: $input-outline !important;
+
+    .p-inputtext {
+      outline: none !important;
+      border-color: transparent !important;
+      cursor: pointer !important;
+    }
+  }
+
+  &.p-disabled {
+    .p-inputtext {
+      background-color: #f4f4f4 !important;
+      color: #aaa !important;
+    }
+  }
+
+  &::placeholder,
+  &.p-placeholder {
+    .p-inputtext {
+      color: #aaa !important;
+    }
+  }
+
+  &.p-invalid,
+  &.error {
+    .p-inputtext {
+      outline: $input-error-outline !important;
+    }
+
+    &:focus,
+    &:hover {
+      .p-inputtext {
+        outline: $input-error-outline !important;
+      }
+    }
+  }
+}
+
+.custom_calendar_icon {
+  margin-top: 5px;
+  margin-right: 2px;
+  margin-left: -18px !important;
+}
+
+.p-inputgroup {
+  border: none !important;
+  box-shadow: none !important;
+  outline: $input-outline !important;
+  border-radius: $border-radius-sm !important;
+  // background-color: #4263eb1a;
+  // width: 100%;
+
+  .inputtext,
+  .p-inputtext,
+  .p-inputtextarea,
+  .p-datepicker,
+  .p-dropdown {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid transparent !important;
+    // width: 50%;
+
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+
+    // even child
+    &:nth-child(2n) {
+      // border-left: $input-outline;
+      background-color: transparent;
+      border-radius: 0 4px 4px 0;
+    }
+
+    &:first-child {
+      border-radius: $border-radius-sm 0 0 $border-radius-sm;
+      // width: 120px !important;
+    }
+
+    &.p-invalid,
+    &.error {
+      outline: none !important;
+      border: $input-error-outline !important;
+
+      &:focus,
+      &:hover {
+        outline: none !important;
+        border: $input-error-outline !important;
+      }
+    }
+  }
+
+  // &.with-addon {
+
+  //   .p-inputtext,
+  //   .p-inputtextarea,
+  //   .inputtext,
+  //   .p-dropdown {
+  //     width: 75%;
+  //   }
+  // }
+
+  .p-inputgroupaddon {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: #f4f4f4;
+    border-radius: $border-radius-sm 0 0 $border-radius-sm !important;
+    font-size: 20px !important;
+    padding: 0 8px;
+    //   width: 25%;
+    //   min-width: 0;
+    //   cursor: pointer;
+
+    //   &:hover {
+    //     background-color: #f4f4f4;
+    //   }
+
+    // &.p-invalid,
+    // &.error {
+    //   border: $input-error-outline !important;
+    // }
+  }
+
+  &.p-invalid,
+  &.error {
+    border: $input-error-outline !important;
+
+    &:focus,
+    &:hover {
+      border: $input-error-outline !important;
+    }
+  }
+}
+
+// Form Calendar Component
+.form_calendar {
+  position: absolute !important;
+  min-width: 250px !important;
+  /* left: 0px; */
+  z-index: 1001;
+  transform-origin: center top;
+  margin-top: calc(var(--p-anchor-gutter));
+
+  .p-datepicker-prev-button,
+  .p-datepicker-next-button {
+    padding: 0 !important;
+    font-size: 14px !important;
+    height: auto !important;
+  }
+
+  .p-datepicker-select-month,
+  .p-datepicker-select-year {
+    padding: 0 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    // font-family: Figtree;
+  }
+
+  .p-datepicker-day {
+    &.p-datepicker-day-selected {
+      background-color: $primary;
+    }
+  }
+
+  thead>tr>th,
+  td {
+    padding: 3px !important;
+    margin: 2px !important;
+  }
+
+  td>span,
+  th>span {
+    width: 25px !important;
+    height: 20px !important;
+    font-size: 12px !important;
+    font-family: Figtree;
+    padding: 0 !important;
+    border-radius: 3px;
+    margin: 0 !important;
+  }
+}
+
+.p-selectbutton {
+  padding: 4px 6px;
+  border-radius: 4px;
+  gap: 4px;
+  background-color: rgba($color: $primary, $alpha: 0.2);
+
+  .p-button {
+    padding: $btn-padding-sm;
+    background-color: transparent;
+    color: $primary;
+    border: none;
+    outline: none;
+    border-radius: $border-radius-sm;
+    transition: $transition-medium;
+    -o-transition: $transition-medium;
+    -ms-transition: $transition-medium;
+    -moz-transition: $transition-medium;
+
+    .p-button-label {
+      font-size: $input-font-size !important;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: #fff;
+    }
+  }
+}

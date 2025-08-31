@@ -1,0 +1,63 @@
+//   <div class="p-2 border-b flex gap-4 w-full hover:bg-blue-100 items-center">
+.list-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+  transition: $transition-medium;
+  -moz-transition: $transition-medium;
+  -webkit-transition: $transition-medium;
+
+  .user-icon {
+    color: #1e40af;
+    font-size: 3rem;
+    transition: $transition-medium;
+    -moz-transition: $transition-medium;
+    -webkit-transition: $transition-medium;
+  }
+
+  .data-section {
+    flex-grow: 1;
+    overflow: hidden;
+    transition: $transition-medium;
+    -moz-transition: $transition-medium;
+    -webkit-transition: $transition-medium;
+
+    .item-name {
+      font-weight: 600;
+      transition: $transition-medium;
+      -moz-transition: $transition-medium;
+      -webkit-transition: $transition-medium;
+    }
+
+    .item-details {
+      font-size: 14px;
+      color: $gray-600;
+      display: flex;
+      align-items: center;
+      transition: $transition-medium;
+      -moz-transition: $transition-medium;
+      -webkit-transition: $transition-medium;
+    }
+  }
+
+  &:hover {
+    background-color: #dbeafe;
+  }
+
+  &.active {
+    background-color: #1e40af;
+
+    .user-icon {
+      color: #fff;
+    }
+
+    .item-name,
+    .item-details {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+//
+// authentication.scss
+//
+
+.auth-full-bg {
+  min-height: 100vh;
+  position: relative;
+  background-color: #eeeeee;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   background: url("../../images/main_banner.webp");
+  //   background-position: right;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   opacity: 0.5;
+  // }
+}
+
+.auth-container-center {
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+
+  .auth-center-card {
+    max-width: 400px;
+    flex-grow: 1;
+    // overflow: hidden;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    margin: auto;
+  }
+
+  @media (max-width: 576px) {
+    align-items: stretch;
+    min-height: 100vh;
+
+    .auth-center-card {
+      height: 100%;
+    }
+  }
+}

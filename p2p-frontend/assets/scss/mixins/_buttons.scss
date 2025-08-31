@@ -1,0 +1,85 @@
+@mixin outlined($color) {
+  border: 1px solid $color;
+  background: transparent;
+  color: $color;
+
+  &:hover,
+  &:focus {
+    background: rgba($color, 0.15);
+  }
+
+  &:disabled {
+    background: transparent;
+    color: rgba($color, 0.5);
+    border: 1px solid rgba($color, 0.5);
+  }
+
+  .badge {
+    background-color: $color;
+    color: white;
+    border: 1px solid $color;
+  }
+}
+
+@mixin button($color, $bg-color) {
+  color: $color;
+  background-color: $bg-color;
+  border: 1px solid $bg-color;
+  border-radius: 6px;
+  padding: 4px 12px;
+  position: relative;
+
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: $color;
+    color: $bg-color;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid $bg-color;
+    height: 20px;
+    width: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    background: darken($color: $bg-color, $amount: 10%);
+  }
+
+  &:disabled {
+    background-color: $bg-color;
+    opacity: 0.5;
+
+    &:hover,
+    &:focus {
+      background-color: $bg-color;
+      opacity: 0.5;
+    }
+  }
+
+  &.outlined {
+    @include outlined($bg-color);
+  }
+
+  &.btn-sm {
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+
+  &.btn-md {
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+
+  &.btn-lg {
+    padding: 6px 16px;
+    font-size: 16px;
+  }
+
+  &.btn-xl {
+    padding: 8px 20px;
+    font-size: 18px;
+  }
+}

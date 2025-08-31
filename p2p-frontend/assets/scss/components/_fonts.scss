@@ -1,0 +1,42 @@
+//subtitle
+h2 {
+  font-family: 'AvenirLTStd-Book';
+  font-size: 16pt;
+
+
+}
+
+//title
+h1 {
+  font-family: 'MerriWeather-Black';
+  font-size: 32pt;
+  // font-weight: 400;
+
+}
+
+// silent text
+h3 {
+  font-family: 'Manrope-ExtraLight';
+  font-size: 12pt;
+
+}
+
+//body
+p {
+  font-family: 'Manrope-ExtraLight';
+  font-size: 12pt;
+
+}
+
+//light heading
+h4 {
+  font-family: 'Manrope-SemiBold';
+  font-size: 28pt;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: $black;
+}
