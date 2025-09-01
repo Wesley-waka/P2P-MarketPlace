@@ -3,11 +3,6 @@
       <Navbar />
       <div class="bg-slate-100 py-10 h-max">
           <div class="max-w-[96rem] px-6 mx-auto grid grid-cols-8 gap-4 ">
-      
-      
-      
-      
-      
       <!--          Display all the connected users-->
               <div class="col-span-2 bg-white rounded-md " style="height: 760px;">
                   <div class=" border-b-[1px] mb-4 pb-[8px] px-4 py-3">
