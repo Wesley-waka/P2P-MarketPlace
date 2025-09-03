@@ -65,9 +65,9 @@
           <Divider layout="horizontal" />
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center w-full mx-auto">
-  <div class="w-[400px] mx-auto">
+  <div class="w-[300px] mx-auto">
     <div>
-      <img src="../../assets/images/hero-4.jpg" class="w-[400px] h-[340px] rounded-md" alt="">
+      <img src="../../assets/images/hero-4.jpg" class="w-[300px] h-[240px] rounded-md" alt="">
     </div>
     <div class="mt-2 flex flex-row items-center gap-2">
       <img src="../../assets/images/hero-4.jpg" class="w-[40px] h-[40px] rounded-lg" alt="">
@@ -86,152 +86,7 @@
     </div>
   </div>
 
-   <div class="w-[400px] mx-auto">
-    <div>
-      <img src="../../assets/images/hero-4.jpg" class="w-[400px] h-[340px] rounded-md" alt="">
-    </div>
-    <div class="mt-2 flex flex-row items-center gap-2">
-      <img src="../../assets/images/hero-4.jpg" class="w-[40px] h-[40px] rounded-lg" alt="">
-      <h6>Wesley Waka</h6>
-    </div>
-    <div class="flex flex-row items-center gap-2 mt-2">
-      <img src="../../assets/images/starRating.png" class="w-[20px] h-[20px] rounded-lg" alt="">
-      <h6>5.0</h6>
-    </div>
-    <div class="mt-2 flex flex-col items-center gap-2">
-      <p>I will fix you car and engine and ensure you are new Lorem ipsum dolor sit amet.</p>
-      <div class="flex flex-row items-center gap-2 w-full justify-between">
-        <h5>300KES</h5>
-        <button class="btn btn-primary outlined  mt-2" @click.prevent="matchUser()">Contact</button>
-    </div>
-    </div>
-  </div>
 
-   <div class="w-[400px] mx-auto">
-    <div>
-      <img src="../../assets/images/hero-4.jpg" class="w-[400px] h-[340px] rounded-md" alt="">
-    </div>
-    <div class="mt-2 flex flex-row items-center gap-2">
-      <img src="../../assets/images/hero-4.jpg" class="w-[40px] h-[40px] rounded-lg" alt="">
-      <h6>Wesley Waka</h6>
-    </div>
-    <div class="flex flex-row items-center gap-2 mt-2">
-      <img src="../../assets/images/starRating.png" class="w-[20px] h-[20px] rounded-lg" alt="">
-      <h6>5.0</h6>
-    </div>
-    <div class="mt-2 flex flex-col items-center gap-2">
-      <p>I will fix you car and engine and ensure you are new Lorem ipsum dolor sit amet.</p>
-      <div class="flex flex-row items-center gap-2 w-full justify-between">
-        <h5>300KES</h5>
-        <button class="btn btn-primary outlined  mt-2" @click.prevent="matchUser()">Contact</button>
-    </div>
-    </div>
-  </div>
-
-   <div class="w-[400px] mx-auto">
-    <div>
-      <img src="../../assets/images/hero-4.jpg" class="w-[400px] h-[340px] rounded-md" alt="">
-    </div>
-    <div class="mt-2 flex flex-row items-center gap-2">
-      <img src="../../assets/images/hero-4.jpg" class="w-[40px] h-[40px] rounded-lg" alt="">
-      <h6>Wesley Waka</h6>
-    </div>
-    <div class="flex flex-row items-center gap-2 mt-2">
-      <img src="../../assets/images/starRating.png" class="w-[20px] h-[20px] rounded-lg" alt="">
-      <h6>5.0</h6>
-    </div>
-    <div class="mt-2 flex flex-col items-center gap-2">
-      <p>I will fix you car and engine and ensure you are new Lorem ipsum dolor sit amet.</p>
-      <div class="flex flex-row items-center gap-2 w-full justify-between">
-        <h5>300KES</h5>
-        <button class="btn btn-primary outlined  mt-2" @click.prevent="matchUser()">Contact</button>
-    </div>
-    </div>
-  </div>
-
-   <div class="w-[400px] mx-auto">
-    <div>
-      <img src="../../assets/images/hero-4.jpg" class="w-[400px] h-[340px] rounded-md" alt="">
-    </div>
-    <div class="mt-2 flex flex-row items-center gap-2">
-      <img src="../../assets/images/hero-4.jpg" class="w-[40px] h-[40px] rounded-lg" alt="">
-      <h6>Wesley Waka</h6>
-    </div>
-    <div class="flex flex-row items-center gap-2 mt-2">
-      <img src="../../assets/images/starRating.png" class="w-[20px] h-[20px] rounded-lg" alt="">
-      <h6>5.0</h6>
-    </div>
-    <div class="mt-2 flex flex-col items-center gap-2">
-      <p>I will fix you car and engine and ensure you are new Lorem ipsum dolor sit amet.</p>
-      <div class="flex flex-row items-center gap-2 w-full justify-between">
-        <h5>300KES</h5>
-        <button class="btn btn-primary outlined  mt-2" @click.prevent="matchUser()">Contact</button>
-    </div>
-    </div>
-  </div>
-
-   <div class="w-[400px] mx-auto">
-    <div>
-      <img src="../../assets/images/hero-4.jpg" class="w-[400px] h-[340px] rounded-md" alt="">
-    </div>
-    <div class="mt-2 flex flex-row items-center gap-2">
-      <img src="../../assets/images/hero-4.jpg" class="w-[40px] h-[40px] rounded-lg" alt="">
-      <h6>Wesley Waka</h6>
-    </div>
-    <div class="flex flex-row items-center gap-2 mt-2">
-      <img src="../../assets/images/starRating.png" class="w-[20px] h-[20px] rounded-lg" alt="">
-      <h6>5.0</h6>
-    </div>
-    <div class="mt-2 flex flex-col items-center gap-2">
-      <p>I will fix you car and engine and ensure you are new Lorem ipsum dolor sit amet.</p>
-      <div class="flex flex-row items-center gap-2 w-full justify-between">
-        <h5>300KES</h5>
-        <button class="btn btn-primary outlined  mt-2" @click.prevent="matchUser()">Contact</button>
-    </div>
-    </div>
-  </div>
-
-   <div class="w-[400px] mx-auto">
-    <div>
-      <img src="../../assets/images/hero-4.jpg" class="w-[400px] h-[340px] rounded-md" alt="">
-    </div>
-    <div class="mt-2 flex flex-row items-center gap-2">
-      <img src="../../assets/images/hero-4.jpg" class="w-[40px] h-[40px] rounded-lg" alt="">
-      <h6>Wesley Waka</h6>
-    </div>
-    <div class="flex flex-row items-center gap-2 mt-2">
-      <img src="../../assets/images/starRating.png" class="w-[20px] h-[20px] rounded-lg" alt="">
-      <h6>5.0</h6>
-    </div>
-    <div class="mt-2 flex flex-col items-center gap-2">
-      <p>I will fix you car and engine and ensure you are new Lorem ipsum dolor sit amet.</p>
-      <div class="flex flex-row items-center gap-2 w-full justify-between">
-        <h5>300KES</h5>
-        <button class="btn btn-primary outlined  mt-2" @click.prevent="matchUser()">Contact</button>
-    </div>
-    </div>
-  </div>
-
-   <div class="w-[400px] mx-auto">
-    <div>
-      <img src="../../assets/images/hero-4.jpg" class="w-[400px] h-[340px] rounded-md" alt="">
-    </div>
-    <div class="mt-2 flex flex-row items-center gap-2">
-      <img src="../../assets/images/hero-4.jpg" class="w-[40px] h-[40px] rounded-lg" alt="">
-      <h6>Wesley Waka</h6>
-    </div>
-    <div class="flex flex-row items-center gap-2 mt-2">
-      <img src="../../assets/images/starRating.png" class="w-[20px] h-[20px] rounded-lg" alt="">
-      <h6>5.0</h6>
-    </div>
-    <div class="mt-2 flex flex-col items-center gap-2">
-      <p>I will fix you car and engine and ensure you are new Lorem ipsum dolor sit amet.</p>
-      <div class="flex flex-row items-center gap-2 w-full justify-between">
-        <h5>300KES</h5>
-        <button class="btn btn-primary outlined  mt-2" @click.prevent="matchUser()">Contact</button>
-    </div>
-    </div>
-  </div>
 
 
 </div>

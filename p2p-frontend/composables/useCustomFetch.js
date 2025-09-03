@@ -48,31 +48,35 @@ export function useCustomFetch(url, options = {}) {
     })
 }
 
-// // Authentication management
-// export function useAuth() {
-//   // Login - persist token
-//   function login(token) {
-//     bearerToken.value = token
-//     localStorage.setItem('bearerToken', token)
-//   }
+// Authentication management
+export function useAuth() {
+  // Login - persist token
+  function login(token) {
+    bearerToken.value = token
+    localStorage.setItem('bearerToken', token)
+  }
 
-//   // Logout - clear token
-//   function logout() {
-//     bearerToken.value = null
-//     localStorage.removeItem('bearerToken')
-//   }
+  // Logout - clear token
+  function logout() {
+    bearerToken.value = null
+    localStorage.removeItem('bearerToken')
+    // You might want to redirect to login page here
+    if (typeof window !== 'undefined') {
+      window.location.href = '/login'
+    }
+  }
 
-//   // Get current token
-//   function getToken() {
-//     return bearerToken.value
-//   }
+  // Get current token
+  function getToken() {
+    return bearerToken.value
+  }
 
-//   return {
-//     login,
-//     logout,
-//     getToken
-//   }
-// }
+  return {
+    login,
+    logout,
+    getToken
+  }
+}
 
 // Export the token ref for reactive operations
 export const token = bearerToken

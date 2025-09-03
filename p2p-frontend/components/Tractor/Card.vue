@@ -15,7 +15,7 @@
 <!--          <button class="btn btn-primary" @click="removeFromFavorites">Remove Favourite</button>-->
         </div>
 
-        <button class="btn btn-primary outlined" @click.prevent="matchUser()">Contact</button>
+        <button class="btn btn-primary outlined m-2" @click.prevent="matchUser()">Contact</button>
       </div>
       <div class="flex flex-row space-x-4 my-3">
         <div class="flex flex-row space-x-1 items-center">
@@ -61,9 +61,11 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { ref } from 'vue'
 // import {useAuthStore} from '../../stores/useAuthStore'
 const router = useRouter();
 const { $toast } = useNuxtApp();
+const loading = ref(false);
 
 const props = defineProps(["product", "allProducts"]);
 
@@ -79,6 +81,7 @@ const { addToFavourite, deleteFavourite } = useFavouriteStore();
 
 const addToFavorites = async () => {
   try {
+    loading.value = true;
     await addToFavourite(props.product._id);
     $toast.success("Product added to favorites:");
     router.push("/tractors");
@@ -118,15 +121,21 @@ const matchUser = async () => {
     }
   )
   
-    if (!res.message) {
-      throw new Error('Failed to match user')
-    }else{
+    console.log('API Response:', res);
+    
+    // Check if the response has a message property and it's not an error
+    if (res && res.message && !res.error) {
+      console.log('true redirect')
       $toast.success('User matched successfully')
       router.push('/messages')
+    } else {
+      console.log('false redirect - response:', res)
+      throw new Error(res.error || 'Failed to match user')
     }
   
   } catch (error) {
     console.error('Error matching user:', error.message)
+    $toast.error(error.message || 'Failed to match user')
   }
 }
 </script>

@@ -427,7 +427,7 @@ const handleSignInSubmit = async () => {
     const user = await logStore.login(formDataLogin.value);
     console.log(user, 'this is the user');
     localStorage.setItem('user', JSON.stringify(user));
-    $toast.success("Login successful");
+    // $toast.success("Login successful");
     router.push("/");
   } catch (error) {
     $toast.error("Email or password is incorrect!");
