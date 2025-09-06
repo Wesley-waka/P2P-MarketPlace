@@ -16,25 +16,15 @@ import implementsRouter from './routes/implements.js';
 import childDealerRouter from './routes/childDealer.js';
 import DealerRouter from './routes/dealer.js';
 import cookieParser from 'cookie-parser';
-import http from "http";
-import { Server } from "socket.io";
 
 const app = express();
-const server = http.createServer(app);
 
 // Configure environment variables
 config();
 
-// Store online users
-const onlineUsers = new Map();
-
-// Initialize Socket.IO
-const io = new Server(server, {
-  cors: {
-    origin: process.env.CLIENT_ORIGIN || '*',
-    methods: ['GET', 'POST'],
-  },
-});
+// File path setup
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Configure CORS
 app.use(cors({
@@ -43,71 +33,70 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// Utility function to get receiver's socket ID
-const getReceiverSocketId = (receiverId) => {
-  return onlineUsers.get(receiverId);
-};
-
-// Socket.IO event handlers
-io.on('connection', (socket) => {
-  console.log('A user connected:', socket.id);
-
-  socket.on('login', (userId) => {
-    if (!mongoose.Types.ObjectId.isValid(userId)) {
-      console.error('Invalid userId:', userId);
-      return;
-    }
-
-
-    console.log(`User ${userId} is online`);
-    onlineUsers.set(userId, socket.id);
-    io.emit('getOnlineUsers', Array.from(onlineUsers.keys()));
-  });
-
-  socket.on('newMessage', (message) => {
-    const { receiverId } = message;
-    if (!mongoose.Types.ObjectId.isValid(receiverId)) {
-      console.error('Invalid receiverId:', receiverId);
-      return;
-    }
-    const receiverSocketId = getReceiverSocketId(receiverId);
-    if (receiverSocketId) {
-      io.to(receiverSocketId).emit('newMessage', message);
-    }
-  });
-
-  socket.on('disconnect', () => {
-    console.log('A user disconnected:', socket.id);
-    for (const [userId, socketId] of onlineUsers.entries()) {
-      if (socketId === socket.id) {
-        onlineUsers.delete(userId);
-        break;
-      }
-    }
-    io.emit('getOnlineUsers', Array.from(onlineUsers.keys()));
-  });
-});
-
-// File path setup
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 // Middleware setup
 app.use(cookieParser());
 app.use(json());
 app.use(session({
-  secret: 'secret',
+  secret: process.env.SESSION_SECRET || 'fallback-secret-key',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  cookie: {
+    secure: process.env.NODE_ENV === 'production',
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  }
 }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Database connection
+// Database connection with caching for serverless
+let cachedDb = null;
 
+async function connectToDatabase() {
+  if (cachedDb && mongoose.connection.readyState === 1) {
+    return cachedDb;
+  }
 
-// Static files and routes
+  try {
+    if (!process.env.MONGO_URI) {
+      throw new Error('MONGO_URI environment variable is not set');
+    }
+
+    const connection = await connect(process.env.MONGO_URI, {
+      bufferCommands: false,
+      maxPoolSize: 10,
+      serverSelectionTimeoutMS: 5000,
+      socketTimeoutMS: 45000,
+    });
+
+    cachedDb = connection;
+    console.log('Connected to MongoDB');
+    return connection;
+  } catch (error) {
+    console.error('Database connection error:', error);
+    throw error;
+  }
+}
+
+// Middleware to ensure database connection
+app.use(async (req, res, next) => {
+  try {
+    await connectToDatabase();
+    next();
+  } catch (error) {
+    console.error('Database connection failed:', error);
+    res.status(500).json({ 
+      error: 'Database connection failed',
+      message: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error'
+    });
+  }
+});
+
+// Static files (Note: Static files don't work well on Vercel serverless functions)
+// Consider using a CDN or separate static hosting for uploads
 app.use('/uploads', serveStatic(path.join(__dirname, 'uploads')));
+
+// Routes
 app.use('/api/tractor', tractorRouter);
 app.use('/api/implement', implementsRouter);
 app.use("/api/review", reviewRouter);
@@ -116,23 +105,31 @@ app.use('/api/messages', messageRouter);
 app.use('/api/child-dealer', childDealerRouter);
 app.use('/api/dealer', DealerRouter);
 
-
-
-
+// Health check endpoint
 app.get('/', (req, res) => {
-  res.send('Hello Tractor API is running....');
+  res.json({ 
+    message: 'Hello Tractor API is running....', 
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development'
+  });
 });
 
-connect(process.env.MONGO_URI).then(() => {
-  app.listen(5000);
-  console.log(`server is listening to PORT 5000`);
-})
-.catch((err) => console.log(err));
+// Global error handler
+app.use((error, req, res, next) => {
+  console.error('Global error handler:', error);
+  res.status(500).json({
+    error: 'Internal Server Error',
+    message: process.env.NODE_ENV === 'development' ? error.message : 'Something went wrong'
+  });
+});
 
-// Start server
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
+// Handle 404 routes
+app.use('*', (req, res) => {
+  res.status(404).json({ 
+    error: 'Route not found',
+    path: req.originalUrl 
+  });
+});
 
-// export { io, getReceiverSocketId };
+// Export the Express app for Vercel
+export default app;
