@@ -23,7 +23,7 @@
                       :class="`w-[300px] ${userType === 'buyer' ? 'border-orangeBright border-2 shadow-2xl' : ''} h-[140px] py-2 px-4 bg-slate-100 rounded-lg`"
                       @click="setUserType('buyer')">
                     <div>
-                      <img src="/public/Black/Hello Tractor_RGB_BLACK_-User.png" class="w-[50px]" alt="">
+                      <img :src="extractPhotos('/public/Black/Hello Tractor_RGB_BLACK_-User.png')" class="w-[50px]" alt="">
                     </div>
                     <p class="font-manropeSemiBold">Buyer,Buy farm equipment <br>and other products</p>
                   </div>
@@ -32,7 +32,7 @@
                       :class="`w-[300px] h-[140px] py-2 ${userType === 'seller' ? 'border-orangeBright border-2 shadow-2xl' : ''} px-4 bg-slate-100 rounded-lg`"
                       @click="setUserType('seller')">
                     <div>
-                      <img src="/public/Black/HT_ICONS_BLACK_RGB-02.png" class="w-[50px]" alt="">
+                      <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-02.png')" class="w-[50px]" alt="">
                     </div>
                     <p class="font-manropeSemiBold">Seller, Sell used Tractors <br>and other products</p>
                   </div>

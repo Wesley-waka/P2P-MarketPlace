@@ -49,12 +49,12 @@
         <div
           class="w-[70rem] rounded-md absolute bg-[#e8f8fb] h-48 z-10 top-[50rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex py-[40px] px-[20px] gap-3">
           <div class="flex align-middle gap-3 my-auto">
-            <img class="h-[120px] " src="../../assets/images/characters/Wekeza Neutral.png" alt="">
+            <img :src="extractPhotos('/assets/images/characters/Wekeza Neutral.png')" class="h-[120px] " src="../../assets/images/characters/Wekeza Neutral.png" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <Divider layout="vertical" />
           <div class="flex align-middle gap-3 my-auto">
-            <img class="h-[120px] " src="../../assets/images/characters/Wekeza Gesture.png" alt="">
+            <img :src="extractPhotos('assets/images/characters/Wekeza Gesture.png')" class="h-[120px] " src="../../assets/images/characters/Wekeza Gesture.png" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
          
@@ -67,14 +67,14 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center w-full mx-auto">
   <div class="w-[300px] mx-auto">
     <div>
-      <img src="../../assets/images/hero-4.jpg" class="w-[300px] h-[240px] rounded-md" alt="">
+      <img :src="extractPhotos('/assets/images/hero-4.jpg')" class="w-[300px] h-[240px] rounded-md" alt="">
     </div>
     <div class="mt-2 flex flex-row items-center gap-2">
-      <img src="../../assets/images/hero-4.jpg" class="w-[40px] h-[40px] rounded-lg" alt="">
+      <img :src="extractPhotos('/../../assets/images/hero-4.jpg')" class="w-[40px] h-[40px] rounded-lg" alt="">
       <h6>Wesley Waka</h6>
     </div>
     <div class="flex flex-row items-center gap-2 mt-2">
-      <img src="../../assets/images/starRating.png" class="w-[20px] h-[20px] rounded-lg" alt="">
+      <img :src="extractPhotos('/../../assets/images/starRating.png')" class="w-[20px] h-[20px] rounded-lg" alt="">
       <h6>5.0</h6>
     </div>
     <div class="mt-2 flex flex-col items-center gap-2">

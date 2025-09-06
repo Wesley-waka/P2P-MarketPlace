@@ -19,19 +19,19 @@
       </div>
       <div class="flex flex-row space-x-4 my-3">
         <div class="flex flex-row space-x-1 items-center">
-          <img src="/public/Black/Hello Tractor_RGB_BLACK_-Settings.png" class="h-[30px] w-[30px]" alt="">
+          <img :src="extractPhotos('/public/Black/Hello Tractor_RGB_BLACK_-Settings.png')" class="h-[30px] w-[30px]" alt="">
           <p>{{ product.engineHoursUsed }} hrs</p>
         </div>
         <div class="flex flex-row space-x-1 items-center">
-          <img src="/public/Black/Hello Tractor_RGB_BLACK_-Schedule.png" class="h-[30px] w-[30px]" alt="">
+          <img :src="extractPhotos('/public/Black/Hello Tractor_RGB_BLACK_-Schedule.png')" class="h-[30px] w-[30px]" alt="">
           <p>{{ product.year }}</p>
         </div>
         <div class="flex flex-row space-x-1 items-center">
-          <img src="/public/Black/HT_ICONS_BLACK_RGB-55.png" class="h-[30px] w-[30px]" alt="">
+          <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-55.png')" class="h-[30px] w-[30px]" alt="">
           <p>{{ product.HPCategory }}hp</p>
         </div>
         <div class="flex flex-row space-x-1 items-center">
-          <img src="/public/Black/HT_ICONS_BLACK_RGB-56.png" class="h-[30px] w-[30px]" alt="">
+          <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-56.png')" class="h-[30px] w-[30px]" alt="">
           <p>Hydraulic Cost</p>
         </div>
       </div>
@@ -44,7 +44,7 @@
       </div>
       <div class="flex flex-row space-x-48 items-center mt-2 w-full">
         <div class="flex flex-row">
-          <img src="/public/Black/HT_ICONS_BLACK_RGB-05.png" class="h-[40px] w-[40px]" alt="">
+          <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-05.png')" class="h-[40px] w-[40px]" alt="">
           <div>
             <h4 class="text-lg">{{ product.location }}, delivery:</h4>
             <p>Nairobi</p>

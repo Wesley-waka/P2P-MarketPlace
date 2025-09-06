@@ -5,7 +5,7 @@
   <div class="max-w-[84rem] mx-auto my-auto px-4">
     <div class="h-[300px] align-bottom my-auto flex flex-row justify-between max-w-[65rem] items-center">
       <div>
-        <img src="../../assets/images/logo_medium.png" alt="" class="h-[70px]" srcset="">
+         <img :src="extractPhotos('assets/images/logo_medium.png')" alt="" class="h-[70px]" srcset="">
         <div class="flex flex-row space-x-2 align-middle ">
           <p>HelloTractor </p><div class="my-auto h-[2px] w-[1px] rounded-full p-2 bg-slate-200"></div> <p>All Rights reserved</p>
         </div>

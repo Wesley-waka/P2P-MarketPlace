@@ -5,16 +5,16 @@
 
         <div class="flex flex-row justify-between">
             <div class="flex flex-row">
-                <img src="/public/Black/HT_ICONS_BLACK_RGB-36.png" class="h-[60px] w-[60px]"alt="">
+                <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-36.png')" class="h-[60px] w-[60px]"alt="">
                 <h2>JohnDeere6R</h2>
             </div>
             <div class="flex flex-row space-x-5">
                 <div>
-                    <img src="/Sunset Blaze/HT_ICONS_ORANGE-50.png" class="h-[30px] w-[30px]" alt="">
+                    <img :src="extractPhotos('/Sunset Blaze/HT_ICONS_ORANGE-50.png')" class="h-[30px] w-[30px]" alt="">
                     <p class="font-manropeBold text-green-400" style="text-decoration: underline; text-decoration-color: green;">Share</p>
                 </div>
                 <div>
-                    <img src="/Sunset Blaze/HT_ICONS_ORANGE-29.png" class="h-[30px] w-[30px]" alt="">
+                    <img :src="extractPhotos('/Sunset Blaze/HT_ICONS_ORANGE-29.png')" class="h-[30px] w-[30px]" alt="">
                     <p class="font-manropeBold" style="text-decoration: underline; text-decoration-color: green;">Share</p>
                 </div>
             </div>
@@ -23,19 +23,19 @@
         <div class="flex flex-row space-x-4">
                                             <!-- E/hr used -->
                                             <div class="flex flex-row space-x-1 items-center">
-                                                <img src="/public/Black/Hello Tractor_RGB_BLACK_-Settings.png" class="h-[30px] w-[30px]" alt="" >
+                                                <img :src="extractPhotos('/public/Black/Hello Tractor_RGB_BLACK_-Settings.png')" class="h-[30px] w-[30px]" alt="" >
                                                 <p>0 hrs</p>
                                             </div>
                                             <div class="flex flex-row space-x-1 items-center">
-                                                <img src="/public/Black/Hello Tractor_RGB_BLACK_-Schedule.png" class="h-[30px] w-[30px]" alt="" >
+                                                <img :src="extractPhotos('/public/Black/Hello Tractor_RGB_BLACK_-Schedule.png')" class="h-[30px] w-[30px]" alt="" >
                                                 <p>9/2024</p>
                                             </div>
                                             <div class="flex flex-row space-x-1 items-center">
-                                                <img src="/public/Black/HT_ICONS_BLACK_RGB-55.png" class="h-[30px] w-[30px]" alt="" >
+                                                <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-55.png')" class="h-[30px] w-[30px]" alt="" >
                                                 <p>125hp</p>
                                             </div>
                                             <div class="flex flex-row space-x-1 items-center">
-                                                <img src="/public/Black/HT_ICONS_BLACK_RGB-56.png" class="h-[30px] w-[30px]" alt="" >
+                                                <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-56.png')" class="h-[30px] w-[30px]" alt="" >
                                                 <p>Hydraulic Cost</p>
                                             </div>
         
@@ -65,15 +65,15 @@
       >
 
         <swiper-slide>
-          <img src="../../assets/images/JohnDeere6R.png" alt="">
+          <img :src="extractPhotos('/../../assets/images/JohnDeere6R.png')" alt="">
         </swiper-slide>
 
         <swiper-slide>
-          <img src="../../assets/images/JohnDeere6R.png" alt="">
+          <img :src="extractPhotos('/../../assets/images/JohnDeere6R.png')" alt="">
         </swiper-slide>
 
         <swiper-slide>
-          <img src="../../assets/images/JohnDeere6R.png" alt="">
+          <img :src="extractPhotos('/../../assets/images/JohnDeere6R.png')" alt="">
         </swiper-slide>
 
       </swiper>
@@ -87,7 +87,7 @@
 
           <div class="grid grid-cols-3 gap-4">
             <div class="flex flex-row align-middle items-center">
-              <img src="/Black/HT_ICONS_BLACK_RGB-63.png" alt="engine_hrs_used" height="90" width="80"/>
+              <img :src="extractPhotos('/Black/HT_ICONS_BLACK_RGB-63.png')" alt="engine_hrs_used" height="90" width="80"/>
               <div>
                 <h5>Engine/hr used</h5>
                 <h3>300 hrs</h3>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="flex flex-row align-middle items-center">
-              <img src="/Black/HT_ICONS_BLACK_RGB-63.png" alt="engine_hrs_used" height="90" width="80"/>
+              <img :src="extractPhotos('/Black/HT_ICONS_BLACK_RGB-63.png')" alt="engine_hrs_used" height="90" width="80"/>
               <div>
                 <h5>Engine/hr used</h5>
                 <h3>300 hrs</h3>
@@ -103,7 +103,7 @@
             </div>
 
             <div class="flex flex-row align-middle items-center">
-              <img src="/Black/HT_ICONS_BLACK_RGB-63.png" alt="engine_hrs_used" height="90" width="80"/>
+              <img :src="extractPhotos('/Black/HT_ICONS_BLACK_RGB-63.png')" alt="engine_hrs_used" height="90" width="80"/>
               <div>
                 <h5>Engine/hr used</h5>
                 <h3>300 hrs</h3>
@@ -111,7 +111,7 @@
             </div>
 
             <div class="flex flex-row align-middle items-center">
-              <img src="/Black/HT_ICONS_BLACK_RGB-63.png" alt="engine_hrs_used" height="90" width="80"/>
+              <img :src="extractPhotos('/Black/HT_ICONS_BLACK_RGB-63.png')" alt="engine_hrs_used" height="90" width="80"/>
               <div>
                 <h5>Engine/hr used</h5>
                 <h3>300 hrs</h3>
@@ -119,7 +119,7 @@
             </div>
 
             <div class="flex flex-row align-middle items-center">
-              <img src="/Black/HT_ICONS_BLACK_RGB-63.png" alt="engine_hrs_used" height="90" width="80"/>
+              <img :src="extractPhotos('/Black/HT_ICONS_BLACK_RGB-63.png')" alt="engine_hrs_used" height="90" width="80"/>
               <div>
                 <h5>Engine/hr used</h5>
                 <h3>300 hrs</h3>
@@ -127,7 +127,7 @@
             </div>
 
             <div class="flex flex-row align-middle items-center">
-              <img src="/Black/HT_ICONS_BLACK_RGB-63.png" alt="engine_hrs_used" height="90" width="80"/>
+              <img :src="extractPhotos('/Black/HT_ICONS_BLACK_RGB-63.png')" alt="engine_hrs_used" height="90" width="80"/>
               <div>
                 <h5>Engine/hr used</h5>
                 <h3>300 hrs</h3>

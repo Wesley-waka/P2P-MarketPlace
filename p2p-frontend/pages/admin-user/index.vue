@@ -11,19 +11,19 @@
         </Tab>
         <Tab value="1" class="flex flex-row space-x-2">
           Sellers
-          <img src="/Black/Hello Tractor_RGB_BLACK_-Income.png" class="w-[40px]" alt="">
+          <img :src="extractPhotos('/Black/Hello Tractor_RGB_BLACK_-Income.png')" class="w-[40px]" alt="">
           <!-- <i class="pi pi-list" /> -->
           
         </Tab>
         <Tab value="2" class="flex flex-row space-x-2">Buyers
           <!-- <i class="pi pi-list" /> -->
-          <img src="/Black/Hello Tractor_RGB_BLACK_-Cart-03.png" class="w-[40px]" alt="">
+          <img :src="extractPhotos('/Black/Hello Tractor_RGB_BLACK_-Cart-03.png')" class="w-[40px]" alt="">
 
           
         </Tab>
         <Tab value="3" class="flex flex-row space-x-2">Products
           <!-- <i class="pi pi-list" /> -->
-          <img src="/Black/Hello Tractor_RGB_BLACK_-Production Cycle.png" class="w-[40px]" alt="">
+          <img :src="extractPhotos('/Black/Hello Tractor_RGB_BLACK_-Production Cycle.png')" class="w-[40px]" alt="">
           
         </Tab>
     </TabList>

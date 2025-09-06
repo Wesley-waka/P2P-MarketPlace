@@ -17,7 +17,7 @@
                   >
                     <div class="relative" @click="handleMessageDisplay(user)">
                       <img
-                          :src="user.images[0] || '/public/Black/HT_ICONS_BLACK_RGB-36.png'"
+                          :src="user.images[0] || extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-36.png')"
                           class="w-12 h-12 rounded-full object-cover border-2 border-gray-100 shadow-sm"
                           alt="User Avatar"
                       />
@@ -114,19 +114,19 @@
                       <!-- </div> -->
                                      <div class="flex flex-col gap-4 pl-4 mt-8 my-3">
                     <div class="flex flex-row space-x-1 items-center">
-                      <img src="/public/Black/Hello Tractor_RGB_BLACK_-Settings.png" class="h-[30px] w-[30px]" alt="">
+                      <img :src="extractPhotos('/public/Black/Hello Tractor_RGB_BLACK_-Settings.png')" class="h-[30px] w-[30px]" alt="">
                       <p>{{ tractor?.engineHoursUsed }} hrs</p>
                     </div>
                     <div class="flex flex-row space-x-1 items-center">
-                      <img src="/public/Black/Hello Tractor_RGB_BLACK_-Schedule.png" class="h-[30px] w-[30px]" alt="">
+                      <img :src="extractPhotos('/public/Black/Hello Tractor_RGB_BLACK_-Schedule.png')" class="h-[30px] w-[30px]" alt="">
                       <p>{{ tractor?.year }}</p>
                     </div>
                     <div class="flex flex-row space-x-1 items-center">
-                      <img src="/public/Black/HT_ICONS_BLACK_RGB-55.png" class="h-[30px] w-[30px]" alt="">
+                      <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-55.png')" class="h-[30px] w-[30px]" alt="">
                       <p>{{ tractor?.HPCategory }}hp</p>
                     </div>
                     <div class="flex flex-row space-x-1 items-center">
-                      <img src="/public/Black/HT_ICONS_BLACK_RGB-56.png" class="h-[30px] w-[30px]" alt="">
+                      <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-56.png')" class="h-[30px] w-[30px]" alt="">
                       <p>Hydraulic Cost</p>
                     </div>
                                     </div>
@@ -155,34 +155,34 @@
                     </div>
                      <!-- <div class="w-2/6"> -->
                         <!-- <img :src="tractor?.images?.[0]" alt="" class="bg-[#e8f8fb]"> -->
-      <img src="../../assets/images/hero-4.jpg" class="w-[400px] h-[240px] rounded-md" alt="">
+      <img :src="extractPhotos('/../../assets/images/hero-4.jpg')" class="w-[400px] h-[240px] rounded-md" alt="">
                       
 
                       <!-- </div> -->
                                      <div class="flex flex-col gap-4 pl-4 mt-8 my-3">
                     <div class="flex flex-row space-x-1 items-center">
-                      <img src="../../assets/images/hero-4.jpg" class="w-[40px] h-[40px] rounded-lg" alt="">
+                      <img :src="extractPhotos('/../../assets/images/hero-4.jpg')" class="w-[40px] h-[40px] rounded-lg" alt="">
                       <h6>Wesley Waka</h6>
                     </div>
                     
                                       <div class="flex flex-row space-x-1 items-center">
-                      <img src="/public/Black/Hello Tractor_RGB_BLACK_-Settings.png" class="h-[30px] w-[30px]" alt="">
+                      <img :src="extractPhotos('/public/Black/Hello Tractor_RGB_BLACK_-Settings.png')" class="h-[30px] w-[30px]" alt="">
                       Engine,Hydraulics,Transmission
                     </div>
 
                     
 
                     <div class="flex flex-row space-x-1 items-center">
-                      <img src="../../assets/images/starRating.png" class="w-[20px] h-[20px] rounded-lg" alt="">
+                      <img :src="extractPhotos('/../../assets/images/starRating.png')" class="w-[20px] h-[20px] rounded-lg" alt="">
       <h6>5.0</h6>
                     </div>
 
                     <div class="flex flex-row space-x-1 items-center">
-                      <img src="/public/Black/Hello Tractor_RGB_BLACK_-Schedule.png" class="h-[30px] w-[30px]" alt="">
+                      <img :src="extractPhotos('/public/Black/Hello Tractor_RGB_BLACK_-Schedule.png')" class="h-[30px] w-[30px]" alt="">
                       <p>Member since August,2025</p>
                     </div>
                     <div class="flex flex-row space-x-1 items-center">
-                      <img src="/public/Black/HT_ICONS_BLACK_RGB-55.png" class="h-[30px] w-[30px]" alt="">
+                      <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-55.png')" class="h-[30px] w-[30px]" alt="">
                       <p>Nakuru</p>
                     </div>
                    

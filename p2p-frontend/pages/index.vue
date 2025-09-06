@@ -53,17 +53,17 @@
         <div
           class="w-[70rem] rounded-md absolute bg-[#e8f8fb] h-48 z-10 top-[50rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex py-[40px] px-[20px] gap-3">
           <div class="flex align-middle gap-3 my-auto">
-            <img class="h-[40px]" src="/caraudit.svg" alt="">
+            <img class="h-[40px]" :src="extractPhotos('/caraudit.svg')" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <Divider layout="vertical" />
           <div class="flex align-middle gap-3 my-auto">
-            <img src="/finance.svg" class="h-[40px]" alt="">
+            <img :src="extractPhotos('/finance.svg')" class="h-[40px]" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <Divider layout="vertical" />
           <div class="flex align-middle gap-3 my-auto">
-            <img src="/legal.svg" class="h-[40px]" alt="">
+            <img :src="extractPhotos('/legal.svg')" class="h-[40px]" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </div>
@@ -77,30 +77,30 @@
           <div
             class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col justify-center items-center space-y-2 mx-auto p-4">
             <h2 class="pt-3 font-manropeSemiBold text-lg">Sub-Compact</h2>
-            <div><img src="../assets/images/mersey.png" class="h-[120px] w-[200px]" alt=""></div>
+            <div><img :src="extractPhotos('/assets/images/mersey.png')" class="h-[120px] w-[200px]" alt=""></div>
           </div>
-
+<!--  -->
           <div
             class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col justify-center items-center space-y-2 mx-auto p-4">
             <h2 class="pt-3 font-manropeSemiBold text-lg">Utility</h2>
-            <div><img src="../assets/images/Kubota.png" class="h-[120px] w-[200px]" alt=""></div>
+            <div><img :src="extractPhotos('/assets/images/Kubota.png')" class="h-[120px] w-[200px]" alt=""></div>
           </div>
 
           <div
             class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col justify-center items-center space-y-2 mx-auto p-4">
             <h2 class="pt-3 font-manropeSemiBold text-lg">Row crop</h2>
-            <div><img src="../assets/images/JohnDeere6R.png" class="h-[120px] w-[200px]" alt=""></div>
+            <div><img :src="extractPhotos('/assets/images/JohnDeere6R.png')" class="h-[120px] w-[200px]" alt=""></div>
           </div>
           <div
             class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col justify-center items-center space-y-2 mx-auto p-4">
             <h2 class="pt-3 font-manropeSemiBold text-lg">Compact</h2>
-            <div><img src="../assets/images/YanMar.png" class="h-[120px] w-[200px]" alt=""></div>
+            <div><img :src="extractPhotos('/assets/images/YanMar.png')" class="h-[120px] w-[200px]" alt=""></div>
           </div>
 
           <div
             class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col justify-center items-center space-y-2 mx-auto p-4">
             <h2 class="pt-3 font-manropeSemiBold text-lg">High Horse Power</h2>
-            <div><img src="../assets/images/caseIH.png" class="h-[120px] w-[200px]" alt=""></div>
+            <div><img :src="extractPhotos('/assets/images/caseIH.png')" class="h-[120px] w-[200px]" alt=""></div>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
             <h1 class="">How it works</h1>
             <div class="flex flex-row justify-between my-32">
               <div class="w-[400px] flex flex-col justify-center align-middle">
-                <img src="../assets/images/characters/Aziza Gesture.png" class="h-[270px]" alt="">
+                <img :src="extractPhotos('/assets/images/characters/Aziza Gesture.png')" class="h-[270px]" alt="">
                 <h4>01.</h4>
                 <h2 class="mt-3">Choose anywhere in Europe</h2>
                 <p class="w-80">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
@@ -119,9 +119,9 @@
               <div class="w-[400px] flex flex-col justify-center align-middle">
                 <div class=" mx-auto">
                   <div class="">
-                    <img src="../assets/images/speechBubble/HT_BRAND ASSETS_SOLID SPEECHBUBBLES_RGB_Sunset Blaze.png"
+                    <img :src="extractPhotos('/assets/images/speechBubble/HT_BRAND ASSETS_SOLID SPEECHBUBBLES_RGB_Sunset Blaze.png')"
                       class="h-[140px] w-[140px]" alt="">
-                    <img src="../assets/images/speechBubble/HT_BRAND ASSETS_SOLID SPEECHBUBBLES_RGB_Plum.png"
+                    <img :src="extractPhotos('/assets/images/speechBubble/HT_BRAND ASSETS_SOLID SPEECHBUBBLES_RGB_Plum.png')"
                       class="flip-horizontal h-[140px] w-[140px] ml-12" alt="">
                   </div>
                 </div>
@@ -130,7 +130,7 @@
                 <p class="w-80">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
               </div>
               <div class="w-[400px] flex flex-col justify-center align-middle">
-                <img src="../assets/images/characters/Caro Gesture.png" class="h-[270px]" alt="">
+                <img :src="extractPhotos('/assets/images/characters/Caro Gesture.png')" class="h-[270px]" alt="">
                 <h4>04.</h4>
                 <h2 class="mt-3">We'll inspect the car closely</h2>
                 <p class="w-80">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
@@ -148,22 +148,22 @@
           <div
             class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col justify-center items-center space-y-2 mx-auto p-4">
             <h2 class="pt-3 font-manropeSemiBold text-lg">CMC</h2>
-            <div><img src="../assets/images/companies/logo.png" class="h-[100px] w-[120px]" alt=""></div>
+            <div><img :src="extractPhotos('/assets/images/companies/logo.png')" class="h-[100px] w-[120px]" alt=""></div>
           </div>
           <div
             class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col justify-center items-center space-y-2 mx-auto p-4">
             <h2 class="pt-3 font-manropeSemiBold text-lg">CFAO Motors</h2>
-            <div><img src="../assets/images/companies/mobilitylogo.png" class="h-[100px] w-[150px]" alt=""></div>
+            <div><img :src="extractPhotos('/assets/images/companies/mobilitylogo.png')" class="h-[100px] w-[150px]" alt=""></div>
           </div>
           <div
             class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col justify-center items-center space-y-2 mx-auto p-4">
             <h2 class="pt-3 font-manropeSemiBold text-lg">Mascor</h2>
-            <div><img src="../assets/images/companies/Mascor.png" class="h-[100px] w-[150px]" alt=""></div>
+            <div><img :src="extractPhotos('/assets/images/companies/Mascor.png')" class="h-[100px] w-[150px]" alt=""></div>
           </div>
           <div
             class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col justify-center items-center space-y-2 mx-auto p-4">
             <h2 class="pt-3 font-manropeSemiBold text-lg">FMD</h2>
-            <div><img src="../assets/images/companies/FMD_2C_RGB.webp" class="h-[120px] w-[200px]" alt=""></div>
+            <div><img :src="extractPhotos('/assets/images/companies/FMD_2C_RGB.webp')" class="h-[120px] w-[200px]" alt=""></div>
           </div>
 
         </div>
@@ -179,7 +179,7 @@
               <div
                 class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col-reverse justify-center items-center space-y-2 mx-auto p-4">
                 <h2 class="pt-3 font-manropeSemiBold text-lg">40,000 - 80,000 KES</h2>
-                <div><img src="/Sunset Blaze/Hello Tractor_RGB_RED_-Payment.png" class="h-[100px] w-[100px]" alt="">
+                <div><img :src="extractPhotos('/Sunset Blaze/Hello Tractor_RGB_RED_-Payment.png')" class="h-[100px] w-[100px]" alt="">
                 </div>
               </div>
             </div>
@@ -188,7 +188,7 @@
               <div
                 class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col-reverse justify-center items-center space-y-2 mx-auto p-4">
                 <h2 class="pt-3 font-manropeSemiBold text-lg">90,000 - 120,000 KES</h2>
-                <div><img src="/Sunset Blaze/Hello Tractor_RGB_RED_-Payment.png" class="h-[100px] w-[100px]" alt="">
+                <div><img :src="extractPhotos('/Sunset Blaze/Hello Tractor_RGB_RED_-Payment.png')" class="h-[100px] w-[100px]" alt="">
                 </div>
               </div>
             </div>
@@ -197,7 +197,7 @@
               <div
                 class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col-reverse justify-center items-center space-y-2 mx-auto p-4">
                 <h2 class="pt-3 font-manropeSemiBold text-lg">120,000 - 240,000 KES</h2>
-                <div><img src="/Sunset Blaze/Hello Tractor_RGB_RED_-Payment.png" class="h-[100px] w-[100px]" alt="">
+                <div><img :src="extractPhotos('/Sunset Blaze/Hello Tractor_RGB_RED_-Payment.png')" class="h-[100px] w-[100px]" alt="">
                 </div>
               </div>
             </div>
@@ -206,7 +206,7 @@
               <div
                 class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col-reverse justify-center items-center space-y-2 mx-auto p-4">
                 <h2 class="pt-3 font-manropeSemiBold text-lg">240,000 - 270,000 KES</h2>
-                <div><img src="/Sunset Blaze/Hello Tractor_RGB_RED_-Payment.png" class="h-[100px] w-[100px]" alt="">
+                <div><img :src="extractPhotos('/Sunset Blaze/Hello Tractor_RGB_RED_-Payment.png')" class="h-[100px] w-[100px]" alt="">
                 </div>
               </div>
             </div>
@@ -225,25 +225,25 @@
             <div
               class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col-reverse justify-center items-center space-y-2 mx-auto p-4">
               <h2 class="pt-3 font-manropeSemiBold text-lg">Nairobi</h2>
-              <div><img src="/Sunset Blaze/HT_ICONS_ORANGE-13.png" class="h-[100px] w-[100px]" alt=""></div>
+              <div><img :src="extractPhotos('/Sunset Blaze/HT_ICONS_ORANGE-13.png')" class="h-[100px] w-[100px]" alt=""></div>
             </div>
 
             <div
               class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col-reverse justify-center items-center space-y-2 mx-auto p-4">
               <h2 class="pt-3 font-manropeSemiBold text-lg">Eldoret</h2>
-              <div><img src="/Sunset Blaze/HT_ICONS_ORANGE-13.png" class="h-[100px] w-[100px]" alt=""></div>
+              <div><img :src="extractPhotos('/Sunset Blaze/HT_ICONS_ORANGE-13.png')" class="h-[100px] w-[100px]" alt=""></div>
             </div>
 
             <div
               class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col-reverse justify-center items-center space-y-2 mx-auto p-4">
               <h2 class="pt-3 font-manropeSemiBold text-lg">Nanyuki</h2>
-              <div><img src="/Sunset Blaze/HT_ICONS_ORANGE-13.png" class="h-[100px] w-[100px]" alt=""></div>
+              <div><img :src="extractPhotos('/Sunset Blaze/HT_ICONS_ORANGE-13.png')" class="h-[100px] w-[100px]" alt=""></div>
             </div>
 
             <div
               class="bg-white border-slate-200  shadow-md border-[0.75px] rounded-md w-[310px] h-[190px] flex flex-col-reverse justify-center items-center space-y-2 mx-auto p-4">
               <h2 class="pt-3 font-manropeSemiBold text-lg">Nakuru</h2>
-              <div><img src="/Sunset Blaze/HT_ICONS_ORANGE-13.png" class="h-[100px] w-[100px]" alt=""></div>
+              <div><img :src="extractPhotos('/Sunset Blaze/HT_ICONS_ORANGE-13.png')" class="h-[100px] w-[100px]" alt=""></div>
             </div>
 
 
@@ -257,7 +257,7 @@
           <div class="max-w-[84rem] px-6 mx-auto">
             <h1 class="text-center">Servicing</h1>
             <div class="flex flex-row my-8 align-middle">
-              <img src="../assets/images/characters/Wekeza Neutral.png" class="h-[400px]" alt="">
+              <img :src="extractPhotos('/assets/images/characters/Wekeza Neutral.png')" class="h-[400px]" alt="">
               <div class="flex flex-col space-y-6 my-auto">
                 <div>
                   <h2>Get our top dealers and service maintainers to check your tractor</h2>
@@ -293,24 +293,48 @@
               <template #content>
                 <div class="flex flex-col justify-center align-middle">
                   <img alt="user header" class="w-[78px] h-[78px] bg-[#ecfcff] p-4 rounded-full mx-auto"
-                    src="/caraudit.svg" />
+                    :src="extractPhotos('/caraudit.svg')" />
                   <div class="mx-auto mt-4">Deal Allocators</div>
                 </div>
                 <div class="mt-4 mx-3 flex-col space-y-1">
                   <div class="flex flex-row space-x-2">
-                    <img src="/White/HT_ICONS_WHITE_RGB-39.png" alt=""
+                    <img :src="extractPhotos('/White/HT_ICONS_WHITE_RGB-39.png')" alt=""
                       class=" rounded-full w-[20px] h-[20px] bg-[#ff461e]">
   
                     <p>Complete with no fine hours</p>
                   </div>
                   <div class="flex flex-row space-x-2">
-                    <img src="/White/HT_ICONS_WHITE_RGB-39.png" alt=""
+                    <img :src="extractPhotos('/White/HT_ICONS_WHITE_RGB-39.png')" alt=""
                       class=" rounded-full w-[20px] h-[20px] bg-[#ff461e]">
   
                     <p>Complete with no fine hours</p>
                   </div>
                   <div class="flex flex-row space-x-2">
-                    <img src="/White/HT_ICONS_WHITE_RGB-39.png" alt=""
+                    <img :src="extractPhotos('/White/HT_ICONS_WHITE_RGB-39.png')" alt=""
+                      class=" rounded-full w-[20px] h-[20px] bg-[#ff461e]">
+  
+                    <p>Complete with no fine hours</p>
+                  </div>
+                </div>
+              </template>
+            </Card>
+  
+            <Card style="width: 23rem; height: 18rem; overflow: hidden; padding: 10px;">
+              <template #content>
+                <div class="flex flex-col justify-center align-middle">
+                  <img alt="user header" class="w-[78px] h-[78px] bg-[#ecfcff] p-4 rounded-full mx-auto"
+                    :src="extractPhotos('/caraudit.svg')" />
+                  <div class="mx-auto mt-4">Deal Allocators</div>
+                </div>
+                <div class="mt-4 mx-3 flex-col space-y-1">
+                  <div class="flex flex-row space-x-2">
+                    <img :src="extractPhotos('/White/HT_ICONS_WHITE_RGB-39.png')" alt=""
+                      class=" rounded-full w-[20px] h-[20px] bg-[#ff461e]">
+  
+                    <p>Complete with no fine hours</p>
+                  </div>
+                  <div class="flex flex-row space-x-2">
+                    <img :src="extractPhotos('/White/HT_ICONS_WHITE_RGB-39.png')" alt=""
                       class=" rounded-full w-[20px] h-[20px] bg-[#ff461e]">
   
                     <p>Complete with no fine hours</p>
@@ -328,43 +352,19 @@
                 </div>
                 <div class="mt-4 mx-3 flex-col space-y-1">
                   <div class="flex flex-row space-x-2">
-                    <img src="/White/HT_ICONS_WHITE_RGB-39.png" alt=""
+                    <img :src="extractPhotos('/White/HT_ICONS_WHITE_RGB-39.png') " alt=""
                       class=" rounded-full w-[20px] h-[20px] bg-[#ff461e]">
   
                     <p>Complete with no fine hours</p>
                   </div>
                   <div class="flex flex-row space-x-2">
-                    <img src="/White/HT_ICONS_WHITE_RGB-39.png" alt=""
-                      class=" rounded-full w-[20px] h-[20px] bg-[#ff461e]">
-  
-                    <p>Complete with no fine hours</p>
-                  </div>
-                </div>
-              </template>
-            </Card>
-  
-            <Card style="width: 23rem; height: 18rem; overflow: hidden; padding: 10px;">
-              <template #content>
-                <div class="flex flex-col justify-center align-middle">
-                  <img alt="user header" class="w-[78px] h-[78px] bg-[#ecfcff] p-4 rounded-full mx-auto"
-                    src="/caraudit.svg" />
-                  <div class="mx-auto mt-4">Deal Allocators</div>
-                </div>
-                <div class="mt-4 mx-3 flex-col space-y-1">
-                  <div class="flex flex-row space-x-2">
-                    <img src="/White/HT_ICONS_WHITE_RGB-39.png" alt=""
+                    <img :src="extractPhotos('/White/HT_ICONS_WHITE_RGB-39.png')" alt=""
                       class=" rounded-full w-[20px] h-[20px] bg-[#ff461e]">
   
                     <p>Complete with no fine hours</p>
                   </div>
                   <div class="flex flex-row space-x-2">
-                    <img src="/White/HT_ICONS_WHITE_RGB-39.png" alt=""
-                      class=" rounded-full w-[20px] h-[20px] bg-[#ff461e]">
-  
-                    <p>Complete with no fine hours</p>
-                  </div>
-                  <div class="flex flex-row space-x-2">
-                    <img src="/White/HT_ICONS_WHITE_RGB-39.png" alt=""
+                    <img :src="extractPhotos('/White/HT_ICONS_WHITE_RGB-39.png')" alt=""
                       class=" rounded-full w-[20px] h-[20px] bg-[#ff461e]">
   
                     <p>Complete with no fine hours</p>
@@ -387,7 +387,7 @@
                   <h4>Your next car <br> is waiting for you here...</h4>
                   <button class="btn btn-primary">133 offers</button>
                 </div>
-                <img src="../assets/images/characters/Gitonga Neutral.png" class="h-[240px]" alt="">
+                <img :src="extractPhotos('/assets/images/characters/Gitonga Neutral.png')" class="h-[240px]" alt="">
               </div>
               <hr>
               <div class="bg-slate-50 flex flex-row justify-around py-8">
@@ -409,17 +409,17 @@
             <div class="">
               <div class="rounded-lg bg-white h-48 z-10 flex py-[40px] px-[20px] gap-3 my-8 max-w-[84rem] mx-auto">
                 <div class="flex align-middle gap-3 my-auto">
-                  <img class="h-[40px]" src="/caraudit.svg" alt="">
+                  <img class="h-[40px]" :src="extractPhotos('/caraudit.svg')" alt="">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <Divider layout="vertical" />
                 <div class="flex align-middle gap-3 my-auto">
-                  <img src="/finance.svg" class="h-[40px]" alt="">
+                  <img :src="extractPhotos('/finance.svg')" class="h-[40px]" alt="">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <Divider layout="vertical" />
                 <div class="flex align-middle gap-3 my-auto">
-                  <img src="/legal.svg" class="h-[40px]" alt="">
+                  <img :src="extractPhotos('/legal.svg')" class="h-[40px]" alt="">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
               </div>
@@ -436,7 +436,7 @@
       <div class="max-w-[84rem] mx-auto my-auto">
         <div class="h-[300px] align-bottom my-auto flex flex-row justify-between max-w-[65rem] items-center">
           <div>
-            <img src="../assets/images/logo_medium.png" alt="" class="h-[70px]" srcset="">
+              <img :src="extractPhotos('/assets/logo_medium.png')" alt="" class="h-[70px]" srcset="">
             <div class="flex flex-row space-x-2 align-middle ">
               <p>HelloTractor </p>
               <div class="my-auto h-[2px] w-[1px] rounded-full p-2 bg-slate-200"></div>
@@ -499,6 +499,7 @@
 import useVuelidate from "@vuelidate/core";
 import { email, required, helpers } from "@vuelidate/validators";
 import Cookies from 'js-cookie';
+import { extractPhotos } from '~/utils/extractPhotos';
 
 definePageMeta({
   layout: "default",

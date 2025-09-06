@@ -8,7 +8,7 @@
           <div class="flex flex-col space-y-2 border-b-2">
             <h2 class="p-2 px-6 font-manropeBold">Filter</h2>
             <div class="p-2 bg-orange-50 border-b-[5px] border-orange-200 shadow-md flex flex-col items-center">
-              <img src="/Sunset Blaze/HT_ICONS_ORANGE-26.png" alt="" class="h-[30px] w-[30px]">
+              <img :src="extractPhotos('/Sunset Blaze/HT_ICONS_ORANGE-26.png')" alt="" class="h-[30px] w-[30px]">
               <h2 class="font-manropeBold text-orange-500">All</h2>
             </div>
           </div>
@@ -106,7 +106,7 @@
         <div class="col-span-3  px-4">
           <div class="w-full h-[50px] bg-white rounded-md">
             <div class="flex flex-row space-x-2 items-center rounded-md">
-              <img src="/Sunset Blaze/Hello Tractor_RGB_RED_-Cart.png" class='w-[50px] p-2 bg-orange-50' alt="">
+              <img :src="extractPhotos('/Sunset Blaze/Hello Tractor_RGB_RED_-Cart.png')" class='w-[50px] p-2 bg-orange-50' alt="">
               <h3>Welcome to your one stop shop for tractors</h3>
             </div>
     
@@ -116,7 +116,7 @@
               <div class="p-1 bg-orange-200 flex flex-row items-center justify-around my-4 w-max rounded-md">
                 <p class="font-manropeBold text-orangeTint text-[12px]">First Registration from 2023
                 </p>
-                <img src="/public/Sunset Blaze/HT_ICONS_ORANGE-21.png" class="h-[20px] w-[20px]">
+                <img :src="extractPhotos('/public/Sunset Blaze/HT_ICONS_ORANGE-21.png')" class="h-[20px] w-[20px]">
               </div>
               <div class="mt-2">
                 <h2 class="font-manropeBold">Verified Cars</h2>

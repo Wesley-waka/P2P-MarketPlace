@@ -3,7 +3,7 @@
     <div class="h-16 p-2 flex space-x-8 align-middle max-w-[84rem] px-6 mx-auto px-10 justify-between">
       <div class="flex flex-row space-x-5 align-middle">
         <NuxtLink to="/">
-         <img class="h-10" src="../../assets/images/logo_medium.png" alt="">
+         <img class="h-10" :src="extractPhotos('/../../assets/images/logo_medium.png')" alt="">
        </NuxtLink>
         <div class="flex flex-row space-x-5 mt-3">
           <h3><NuxtLink to="/tractors">Buy</NuxtLink></h3>
@@ -16,12 +16,12 @@
       </div>
       <div class="flex space-x-4 mt-3 items-center">
         <NuxtLink to="/messages">
-          <img src="/public/Black/HT_ICONS_BLACK_RGB-71.png" class="w-[50px]" alt="">
+          <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-71.png')" class="w-[50px]" alt="">
         </NuxtLink>
 <!--        <NuxtLink to='/favourites'><i class="pi pi-heart" style="font-size: 1.5rem"></i></NuxtLink>-->
 
         <div class="flex align-middle mx-auto space-x-2" @click="visible = true">
-          <img src="/login.svg" class="h-8" alt="">
+          <img :src="extractPhotos('/login.svg')" class="h-8" alt="">
           <h3 class="mt-1" v-if="user"><NuxtLink to="/login">Logout</NuxtLink></h3>
           <h3 class="mt-1" v-else><NuxtLink to="/login">Login</NuxtLink></h3>
         </div>

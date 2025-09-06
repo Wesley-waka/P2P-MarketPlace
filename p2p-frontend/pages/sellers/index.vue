@@ -11,7 +11,7 @@
         </Tab>
         <Tab value="1" class="flex flex-row space-x-2">Products
           <!-- <i class="pi pi-list" /> -->
-          <img src="/Black/Hello Tractor_RGB_BLACK_-Production Cycle.png" class="w-[40px]" alt="">
+          <img :src="extractPhotos('/Black/Hello Tractor_RGB_BLACK_-Production Cycle.png')" class="w-[40px]" alt="">
           
         </Tab>
     </TabList>

@@ -3,7 +3,7 @@
     <!-- First child div (1/4 width) containing video -->
     <div class="w-3/5 h-full">
       <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-        <source src="/hero-vid.mp4" type="video/mp4">
+        <source :src="extractPhotos('/hero-vid.mp4')" type="video/mp4">
       </video>
     </div>
 
@@ -16,7 +16,7 @@
         <!-- LOGIN FORM -->
         <div v-if="sign_in" class="h-full overflow-auto flex flex-col">
           <div class="flex items-center mx-auto px-3">
-            <img src="/logo.png" alt="logo" class="h-12 mb-4" />
+            <img :src="extractPhotos('/logo.png')" alt="logo" class="h-12 mb-4" />
 
             <div class="flex items-center gap-1">
 
@@ -70,7 +70,7 @@
             <div class="items-center">
               <button
                 class="w-full btn btn-primary outlined max-w-[254px] items-center mx-auto align-middle flex justify-around">
-                <img src="/google.png " alt="google-sign-in" class="w-[30px] h-[30px]">
+                <img :src="extractPhotos('/google.png')" alt="google-sign-in" class="w-[30px] h-[30px]">
                 Sign in with Google
               </button>
               <div class="text-center mt-4">Don't have an account? <a href="/sign-up" class="text-blue-700">Sign Up</a>
@@ -99,7 +99,7 @@
                 :class="`w-[300px] ${userType === 'buyer' ? 'border-orangeBright border-2 shadow-2xl' : ''} h-[140px] py-2 px-4 bg-slate-100 rounded-lg`"
                 @click="setUserType('buyer')">
                 <div>
-                  <img src="/public/Black/Hello Tractor_RGB_BLACK_-User.png" class="w-[50px]" alt="">
+                  <img :src="extractPhotos('/public/Black/Hello Tractor_RGB_BLACK_-User.png')" class="w-[50px]" alt="">
                 </div>
                 <p class="font-manropeSemiBold">Buyer,Buy farm equipment <br>and other products</p>
               </div>
@@ -108,7 +108,7 @@
                 :class="`w-[300px] h-[140px] py-2 ${userType === 'seller' ? 'border-orangeBright border-2 shadow-2xl' : ''} px-4 bg-slate-100 rounded-lg`"
                 @click="setUserType('seller')">
                 <div>
-                  <img src="/public/Black/HT_ICONS_BLACK_RGB-02.png" class="w-[50px]" alt="">
+                  <img :src="extractPhotos('/public/Black/HT_ICONS_BLACK_RGB-02.png')" class="w-[50px]" alt="">
                 </div>
                 <p class="font-manropeSemiBold">Seller, Sell used Tractors <br>and other products</p>
               </div>
