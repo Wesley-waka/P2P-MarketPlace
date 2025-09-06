@@ -8,7 +8,7 @@
           loop
           playsinline
       >
-        <source src="/hero-vid.mp4" type="video/mp4">
+        <source :src="extractPhotos('/hero-vid.mp4')" type="video/mp4">
       </video>
     </div>
 
